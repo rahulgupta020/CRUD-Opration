@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="container">
+            <h2>Enter Details</h2>
+            Name{{ form.name }}<br>
+            Description{{ form.desc }}<br>
+            Quantity{{ form.quantity }}<br>
+            Price{{ form.price }}<br>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <a href="/show/">List</a>
+</body>
+</html>

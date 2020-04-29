@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+</head>
+<body>
+    <h2>Show List</h2>
+    <table border="2">
+        <tr>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Quantity</td>
+            <td>Price</td>
+            <td>Action</td>
+        </tr>
+        {% for allproduct in products %}
+        <tr>
+            <td>{{ allproduct.name }}</td>
+            <td>{{ allproduct.desc }}</td>
+            <td>{{ allproduct.quantity }}</td>
+            <td>{{ allproduct.price }}</td>
+            <td>
+                <a href="/edit/{{ allproduct.id }}">edit</a>
+                <a href="/delete/{{ allproduct.id }}">delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
