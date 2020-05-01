@@ -6,8 +6,14 @@
     <title>Delete</title>
 </head>
 <body>
-    <h2>Are you sure want to delete</h2>
-    <a href="/delete/{{ product.id }}">Yes</a>
-    <a href="/show/">No</a>
+
+    <h1>CRUD Function Based View Example</h1>  
+    <form method="post">  
+       {% csrf_token %}  
+        Are you sure you want to delete "{{ object }}" ?  
+        <input type="submit" value="Submit" />  
+    </form>  
+
+
 </body>
 </html>
